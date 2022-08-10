@@ -1,14 +1,5 @@
-console.log("merhaba");
+console.log("Bu bir external scriptir");
 
 
-document.write("selam");
 
-function test(){
- console.log("hellloo");
-}
 
-test();
-
-let isMeried = true;
-
-console.log(isMeried);
