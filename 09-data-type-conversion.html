@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internal Script</title>
+  </head>
+  <body>
+    <script>
+      let num = "13";
+      const result = num + 5;
+      console.log(result);
+
+      const result1 = Number(num) + 5;
+      console.log(result1);
+
+      const result2 = Number("ali") + 5; // NaN(Not a number)  hatası verir
+      console.log(result2);
+
+      const para = 5400;
+      console.log(para+15); //5415
+      console.log(String(para)+15); //540015
+
+      const s1 = 5;
+      const s2 = -7;
+      const name = "John";
+      console.log(Boolean(s1));//true
+      console.log(Boolean(s2));//true
+      console.log(Boolean(name));//true
+
+      const ziro = 0, nal = null;
+      const undified = undified;
+      const bos = "", notNumber = NaN;
+      console.log(Boolean(ziro), Boolean(nal));//false false
+      console.log(Boolean(undified), Boolean(bos));// false false
+      console.log(Boolean(notNumber));// false
+
+
+    </script>
+  </body>
+</html>
