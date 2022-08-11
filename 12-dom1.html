@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body>
+      <h1>Hello World!</h1>
+      <h1>TECHPRO</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, velit error asperiores nobis est sunt culpa rem sequi consequatur numquam quia dicta aut repellendus sit. Alias natus ab tempore quisquam?
+      </p>
+
+      <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+
+
+    <script>
+      const elH1 = document.querySelector("h1");
+      console.log(elH1.innerText);
+
+      elH1.innerText = "Hello JavaScript";
+      elH1.innerHTML = "Hello <em>JavaScript</em>"
+      
+      
+      const allH1 = document.querySelectorAll("h1");
+      console.log(allH1);
+
+      const elHome = document.querySelector(".menu li:first-child");
+      console.log(elHome);
+      elHome.innerText = "AnaSayfa";
+
+      
+
+
+
+
+    </script>
+  </body>
+</html>
