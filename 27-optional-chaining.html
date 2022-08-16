@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+
+ <button onclick="setUserInfo()">Click Me</button>
+
+
+ <script>
+   const user1 = {
+    name:"fatih",
+    age:33,
+    salary:15000,
+    phone:{
+     line:222222,
+     gsm:4444444,
+    }
+   };
+
+   const user2={
+    name:"meltem",
+    salary:33000,
+   };
+
+   function setUserInfo(){
+    const newSalary = user2?.salary*1.5;
+
+    const phone = user2?.phone?.gsm;
+
+    console.log(`Sn. ${user2?.name} yeni maaşınız ${newSalary} olmuştur.`);
+   }
+
+
+ </script>
+ 
+</body>
+</html>
