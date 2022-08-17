@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     #productList span{
+      font-weight: bolder;
+     }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="txtRate" />
+    <button onclick="calculate()">Update</button>
+
+    <ul id="productList">
+      <li>Notebook <span>1500</span>$</li>
+      <li>Monitor <span>500</span>$</li>
+      <li>Keyboard <span>10</span>$</li>
+      <li>Mouse <span>5</span>$</li>
+      <li>Sound Card <span>150</span>$</li>
+    </ul>
+
+    <script>
+      function calculate() {
+       let inputRate = document.querySelector("#txtRate").value;
+       inputRate = !isNaN(inputRate) ? inputRate : 0
+
+       //listedeki tüm elemanları seçerek, eleman sayısını aldık
+       const list = document.querySelectorAll("#productList li");
+    
+        for (let i = 1; i < 6; i++) {
+          let elPrice = document.querySelector(
+            `#productList li:nth-child(${i}) span`
+          );
+          
+          let price = Number(elPrice.innerHTML);
+        price = price + (price * inputRate) / 100;
+
+        elPrice.innerHTML = price.toFixed(0);//virgülden sonraki kısımların 0 olacağını tanımladık.
+        }
+
+        
+
+        
+        
+      }
+    </script>
+  </body>
+</html>
