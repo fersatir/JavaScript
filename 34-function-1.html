@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="txtNumber" />
+
+    <button id="hesapla" onclick="handleCalculate()">Hesapla</button>
+
+    <h3 id="result">...</h3>
+
+    <script>
+      function handleCalculate() {
+        const num = document.querySelector("#txtNumber").value;
+        
+        const result = calculate(num);
+
+        document.querySelector("#result").innerHTML = `${num}! = ${result}`;
+      }
+
+      function calculate(val) {
+        let num = isNaN(val + 1) ? 0 : Number(val);
+        num = num == 0 ? 1 : num;
+
+        let factoriel = 1;
+
+        do {
+          factoriel *= num;
+          num--;
+        } while (num > 1);
+
+        return factoriel;
+      }
+    </script>
+  </body>
+</html>
