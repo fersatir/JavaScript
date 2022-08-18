@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+
+ <input type="number" id="txtYear" placeholder="Type your birth year" />
+
+    <button id="hesapla" onclick="onleCalculateClick()">Hesapla</button>
+
+    <h3 id="result">...</h3>
+
+
+
+    <script>
+
+    function onleCalculateClick(){
+     const age = document.querySelector("#txtYear").value;
+
+     document.querySelector("#result").innerHTML = getAge(age);
+
+     }
+
+     function getAge(year){
+      if(isNaN(year) || !year || year<0) return;
+     
+      const date = new Date();
+      const currentYear = date.getFullYear();
+      if(year>currentYear) return;
+
+      const age = currentYear - year;
+    
+      return age;
+     }
+    </script>
+ 
+</body>
+</html>
