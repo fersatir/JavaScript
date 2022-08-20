@@ -21,7 +21,16 @@ document.querySelector("#btnRemoveLast").addEventListener("click", () => {
 });
 
 document.querySelector("#btnRemoveAll").addEventListener("click", () => {
-  cities.splice(0,cities.length);
+  cities.splice(0, cities.length);
+  loadList();
+});
+
+document.querySelector("#btnAddCity").addEventListener("click", () => {
+  const city = document.querySelector("#txtCity").value;
+
+  if (!city || cities.includes(city)) return;
+  cities.push(city);
+
   loadList();
 });
 
