@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btnZam">Elemanlara %20 zam ekle</button>
+
+    <script>
+        let arr = [10,20,30,40,50];
+        console.log(arr);
+
+        document.querySelector("#btnZam").addEventListener("click",()=>{
+         const price = addPrice(arr);
+         console.log(price);
+        });
+
+        const addPrice = (num)=>{
+      if (!num && typeof num !== "object" && num.length <= 0) return;
+      for (let i = 0;i<num.length;i++){
+        num[i] = num[i]+num[i]*0.2;
+      }
+      return num;
+        };
+    </script>
+  </body>
+</html>
