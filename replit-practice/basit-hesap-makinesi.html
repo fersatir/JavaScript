@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="num1" /><label for="num1"> Sayı 1</label
+    ><br /><br />
+    <input type="number" id="num2" /><label for="num2"> Sayı 2</label
+    ><br /><br />
+    <select id="select">
+      <option>İşlem Seçiniz</option>
+      <option value="1">Topla</option>
+      <option value="2">Çıkar</option>
+      <option value="3">Çarp</option>
+      <option value="4">Böl</option>
+    </select>
+    <br /><br />
+    <button id="btn">Hesapla</button><br /><br />
+    <label id="result">Sonuç</label>
+
+    <script>
+      let select = document.querySelector("#select");
+      let result = document.querySelector("#result");
+
+      document.querySelector("#btn").addEventListener("click", () => {
+        let num1 = document.querySelector("#num1").value;
+        let num2 = document.querySelector("#num2").value;
+        let value = select.options[select.selectedIndex].value;
+
+        if (value == 1) result.innerHTML = sum(Number(num1), Number(num2));
+        if (value == 2) result.innerHTML = minus(Number(num1), Number(num2));
+        if (value == 3) result.innerHTML = multpl(Number(num1), Number(num2));
+        if (value == 4 && num2 != 0) {
+          result.innerHTML = devide(Number(num1), Number(num2));
+        }else result.innerHTML = "Sayı 2 '0' alamaz";
+      });
+
+      const sum = (a, b) => a + b;
+
+      const minus = (a, b) => a - b;
+
+      const multpl = (a, b) => a * b;
+
+      const devide = (a, b) => a / b;
+    </script>
+  </body>
+</html>

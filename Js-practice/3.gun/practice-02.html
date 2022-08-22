@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     .container {
+      padding:1rem;
+      background-color:aqua;
+      width:70%;
+     }
+     .container input, .container button{
+      padding:.5rem;
+      font-size:1.2rem;
+     }
+     .container label{
+      font-size:1.3rem;
+      margin-right: .6rem;
+     }
+     .container #result{
+      margin-top:1rem;
+      padding:1rem;
+      font-size: 1.3rem;
+
+     }
+     .kirmizi{
+      background-color:rgb(168, 87, 87);
+      color:aliceblue
+     }
+     .yesil{
+      background-color:rgb(36, 78, 36);
+      color:aliceblue;
+     }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="number" name="age" id="age" />
+      <input type="radio" name="cinsiyet" id="erkek">
+      <label for="erkek">Erkek</label>
+      <input type="radio" name="cinsiyet" id="kadin">
+      <label for="kadin">Kadin</label>
+      <button id="durum" onclick="durum()">Askerlik Durumu</button>
+      <button id="reset" type="reset" onclick="reset()">Reset</button>
+      <div id="result"></div>
+    </div>
+
+    <script src="app2.js"></script>
+  </body>
+</html>
