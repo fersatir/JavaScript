@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .blue {
+        background-color: blue;
+        color: white;
+      }
+      .red {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="title">Bugün hava çok sıcak</h2>
+    <button id="btn1">add</button>
+    <button id="btn2">remove</button>
+    <button id="btn3">toggle</button>
+    <button id="btn4">replase</button>
+
+    <script>
+     const title = document.querySelector("#title");
+
+     document.querySelector("#btn1").addEventListener("click",()=>{
+      title.classList.add("blue");
+     });
+
+     document.querySelector("#btn2").addEventListener("click",()=>{
+      title.classList.remove("blue");
+     });
+
+      document.querySelector("#btn3").addEventListener("click",()=>{
+      title.classList.toggle("blue");
+     });
+
+      document.querySelector("#btn4").addEventListener("click",()=>{
+      title.classList.replace("blue","red");
+     });
+    </script>
+  </body>
+</html>
